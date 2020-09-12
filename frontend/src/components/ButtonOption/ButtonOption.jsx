@@ -11,11 +11,7 @@ const ButtonOption = styled.div`
     border-radius: 2px;
     text-decoration: none;
     text-align: center;
-    :hover{
-        transition: 0.4s;
-        border-bottom: solid 1px #fff;
-        background: #89c64e;
-    }
+    background: #89c64e;
 
     @media (max-width: 768px){
         margin: 1vh;
