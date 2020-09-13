@@ -22,9 +22,10 @@ const Menu = styled.div`
     }
 `;
 
-const Rows = styled.div`
+export const Rows = styled.div`
     border-bottom: 2px solid #045c94;
 `;
+
 
 const Row = styled.div`
     display: flex;
