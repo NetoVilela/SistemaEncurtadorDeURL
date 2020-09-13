@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Explanation = styled.div`
     display: flex;
     justify-content: center;
-    background: #97CAE5;
+    background: rgb(151, 202, 229);
     color: #333;
     font-weight: bold;
     padding: 10vh;

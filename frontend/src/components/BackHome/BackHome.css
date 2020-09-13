@@ -1,0 +1,22 @@
+.link-backhome{
+    text-decoration: none;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width: 430px){
+    .link-backhome{
+        font-size: 0.9em;
+    }
+}
+@media only screen and (min-width: 431px) and (max-width: 600px){
+    .link-backhome{
+        font-size: 1em;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px){
+    .link-backhome{
+        font-size: 1.2em;
+    }
+}

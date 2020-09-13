@@ -54,7 +54,7 @@ export default props => {
         }, 50)
         return () => clearInterval(interval);
 
-    }, [opacity, opacity]);
+    }, [opacity, statusOpacity]);
 
     return (
         <Link className="link" to={props.url}>

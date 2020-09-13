@@ -5,6 +5,7 @@ const Topic = styled.div`
     margin-top: 4vh;
     width: 100%;
     padding: 3vh;
+    
 `;
 
 const Title = styled.div`

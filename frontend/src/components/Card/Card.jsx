@@ -31,17 +31,18 @@ const TitleCard = styled.div`
     justify-content: center;
     background: #fff;
     font-weight: bold;
+    padding-bottom: 4vh;
 `;
 const Description = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    
     font-size: 1em;
     background: #fff;
     padding: 2vh;
     height: 4vh;
     border-radius: 4px;
+    padding-bottom: 4vh;
 `;
 
 export default props => {

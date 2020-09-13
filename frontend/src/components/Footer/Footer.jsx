@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -22,7 +21,7 @@ export default props =>{
     return(
         <Footer>
             <FooterContent>
-                    <p>2020 - Desenvolvido por <a className="linkGit" href="https://github.com/NetoVilela" target="_blank">Neto Vilela</a></p> 
+                    <p>2020 - Desenvolvido por <a className="linkGit" href="https://github.com/NetoVilela" target="_blank" rel="noopener noreferrer">Neto Vilela</a></p> 
             </FooterContent>
         </Footer>
     )
