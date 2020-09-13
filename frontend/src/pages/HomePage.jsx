@@ -4,7 +4,10 @@ import React from 'react';
 import Menu from '../components/Menu/Menu';
 import Container from '../components/Container/Container';
 import Explanation from '../components/Explanation/Explanation';
-import Why from '../components/Why/Why';
+import Topic from '../components/Topic/Topic';
+import Cards from '../components/Card/Cards';
+import CardsLink from '../components/CardLink/CardsLink';
+import Footer from '../components/Footer/Footer';
 
 export default props => {
     return (
@@ -12,7 +15,13 @@ export default props => {
             <Menu />
             <Explanation />
             <Container>
-                <Why />
+                <Topic title="Por quê eu devo usar um Encurtador de URL?">
+                    <Cards />
+                </Topic>
+                <Topic title="Não perca mais tempo!">
+                    <CardsLink />
+                </Topic>
+                <Footer />
             </Container>
         </React.Fragment>
     )

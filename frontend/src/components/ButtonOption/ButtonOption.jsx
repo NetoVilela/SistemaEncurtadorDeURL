@@ -33,9 +33,17 @@ const ButtonOption = styled.div`
 `;
 
 export default props => {
-    return (
-            <Link to={props.route} className="link">
+
+    if(props.islink){
+        return (
+            <Link to={props.url} className="link">
             <ButtonOption>{props.children}</ButtonOption>
             </Link>
-    )
+        )
+    }else{
+        return (
+            <ButtonOption>{props.children}</ButtonOption>
+        )
+    }
+    
 }

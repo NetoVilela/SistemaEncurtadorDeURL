@@ -28,8 +28,8 @@ const UL = styled.ul`
 export default props =>{
     return(   
         <UL open={props.open}>
-            <li><ButtonOption route="/cadastro" >Cadastre-se</ButtonOption></li>
-            <li><ButtonOption route="/login" >Login</ButtonOption></li>
+            <li><ButtonOption url="/cadastro" islink={true} >Cadastre-se</ButtonOption></li>
+            <li><ButtonOption url="/login" islink={true} >Login</ButtonOption></li>
         </UL>
     )
 }
