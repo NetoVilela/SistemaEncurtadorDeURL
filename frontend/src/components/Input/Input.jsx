@@ -5,20 +5,21 @@ const Input = styled.input`
     font-family: 'Roboto', sans-serif;
     background: transparent;
     border: 0;
-    border-bottom: 2px solid #89C64E;
+    border-bottom: 2px solid rgba(0,0,0,0.8);
+    margin-top: 1vh;
     padding: 2vh;
-    color: #fff;
+    color: rgba(0,0,0,0.8);
 
     ::-webkit-input-placeholder { /* Edge */
-    color: rgba(255,255,255,0.8);
+    color: rgba(0,0,0,0.8);
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: rgba(255,255,255,0.8);
+        color: rgba(0,0,0,0.8);
     }
 
     ::placeholder {
-        color: rgba(255,255,255,0.8);
+        color: rgba(0,0,0,0.8);
     }
     
 `;

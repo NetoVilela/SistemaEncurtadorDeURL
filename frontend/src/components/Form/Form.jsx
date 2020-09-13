@@ -14,7 +14,8 @@ const Form = styled.form`
     padding: 3vh;
     width: 40%;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0,0,0,0.8);
+    background: #f1f4f3;
 
     @media only screen and (max-width: 430px){
         width:90%;
@@ -35,9 +36,9 @@ const Title = styled.h3`
     margin: 0 auto;
     text-align: center;
     font-size: 1.4em;
-    color: #89C64E;
+    color: rgba(0,0,0,0.8);
     width: 60%;
-    border-bottom: 2px solid #89C64E;
+    border-bottom: 2px solid rgba(0,0,0,0.8);
     margin-bottom: 4vh;
     padding-bottom: 2vh;
 

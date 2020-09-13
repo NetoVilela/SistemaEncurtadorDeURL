@@ -8,8 +8,6 @@ import Input from '../components/Input/Input';
 import ButtonForm from '../components/ButtonForm/ButtonForm';
 
 const RegisterPage = styled.div`
-    background: rgb(151, 202, 229);
-    border: solid 1px rgb(151, 202, 229);
     height: 100vh;
 `;
 

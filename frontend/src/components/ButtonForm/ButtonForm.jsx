@@ -8,7 +8,7 @@ const ButtonForm = styled.button`
     font-size: 1.2em;
     border-radius: 4px;
     color: #89C64E;
-    border: 1px solid #89C64E;
+    border: 3px solid #89C64E;
     font-weight: bold;
     margin-top: 2vh;
 
