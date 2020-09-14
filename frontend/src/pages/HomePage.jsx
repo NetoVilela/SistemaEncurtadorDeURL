@@ -15,7 +15,7 @@ export default props => {
             <Menu />
             <Explanation />
             <Container>
-                <Topic title="Por quê eu devo usar um Encurtador de URL?">
+                <Topic title="Por quê eu devo usar o SEURL?">
                     <Cards />
                 </Topic>
                 <Topic title="Não perca mais tempo!">
