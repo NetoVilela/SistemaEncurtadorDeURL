@@ -4,6 +4,8 @@ import styled from 'styled-components';
 /* Components General */
 import SideBar from '../SideBar/SideBar';
 
+import api from '../../config/api';
+
 const ListPage = styled.div`
     display: flex;
     align-items: center;
@@ -21,19 +23,6 @@ const Area = styled.div`
     max-width: 80vw;
     border: solid 1px black;
     overflow: auto;
-
-    @media only screen and (max-width: 430px){
-    
-    }
-    @media only screen and (min-width: 431px) and (max-width: 600px){
-        
-    }
-    @media only screen and (min-width: 601px) and (max-width: 999px){   
-        
-    }
-    @media only screen and (min-width: 1000px){
-        
-    }
 
     table{
         width: 100%;
@@ -73,47 +62,55 @@ const Area = styled.div`
     }
 `;
 
-export default props => {
-    return (
-        <ListPage>
-            <SideBar active="list" />
-            <List>
-                <Area>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Url Original</th>
-                                <th>Nova URL</th>
-                                <th>Data</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>www.google.com.brwaasdasdadsadsaasdadsadsaasdadsadsaasdadsadsaasdadsadsaasdadsadsadasdasdasdasedawdwadwadwawd</td>
-                                <td>www.google.com.com.com.com.br</td>
-                                <td>05/05/2000</td>
-                            </tr>
-                            <tr>
-                                <td>www.google.com.br</td>
-                                <td>www.google.com.br</td>
-                                <td>05/05/2000</td>
-                            </tr>
-                            <tr>
-                                <td>www.google.com.br</td>
-                                <td>www.google.com.br</td>
-                                <td>05/05/2000</td>
-                            </tr>
-                            <tr>
-                                <td>www.google.com.br</td>
-                                <td>www.google.com.br</td>
-                                <td>05/05/2000</td>
-                            </tr>
+class ListClass extends React.Component {
 
-                        </tbody>
-                    </table>
-                </Area>
-            </List>
+    state = {
+        urls: [],
+    }
 
-        </ListPage>
-    )
+    async componentDidMount() {
+        const response = await api.get('/');
+
+        this.setState({
+            urls: response.data[0]
+        });
+
+    }
+
+    render() {
+        const { urls } = this.state;
+
+        return (
+            <ListPage>
+                <SideBar active="list" />
+                <List>
+                    <Area>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Url Original</th>
+                                    <th>Nova URL</th>
+                                    <th>Data</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {urls.map(url => {
+                                    return (
+                                        <tr key={url.id}>
+                                            <td>{url.original_url}</td>
+                                            <td>{url.new_url}</td>
+                                            <td>{url.createdAt}</td>
+                                        </tr>
+                                    )
+                                })}
+                            </tbody>
+                        </table>
+                    </Area>
+                </List>
+
+            </ListPage>
+        )
+    }
 }
+
+export default ListClass;

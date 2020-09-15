@@ -14,13 +14,13 @@ export default props => {
             <Form
             title="Login"
             method="POST"
-            action="testeLogin"
+            action={process.env.REACT_APP_API_LOGIN}
             smallQuestion="Ainda não tem uma conta? " 
             smallResponse=" Cadastre-se."
             redirect="/cadastro"
             >
                 <Input type="email" name="email" placeholder="Insira seu email" />
-                <Input type="password" nanme="password" placeholder="Insira sua senha" />
+                <Input type="password" name="senha" placeholder="Insira sua senha" />
                 <ButtonForm>Entrar</ButtonForm>
             </Form>
         </React.Fragment>

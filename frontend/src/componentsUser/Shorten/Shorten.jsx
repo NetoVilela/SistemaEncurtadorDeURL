@@ -61,8 +61,8 @@ export default props => {
             <SideBar active="shorten" />
             <Shorten>
                 <AddURL>
-                    <form action="/encurtarURL" method="post">
-                        <input autoComplete="off" type="text" placeholder="Coloque aqui a sua URL" />
+                    <form action={process.env.REACT_APP_API_SHORTEN_URL} method="post">
+                        <input autoComplete="off" type="text" name="url" placeholder="Coloque aqui a sua URL" />
                         <button type="submit">Encurtar</button>
                     </form>
                 </AddURL>
