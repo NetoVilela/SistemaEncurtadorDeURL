@@ -20,13 +20,13 @@
    * [Pré requisitos](#Pré-requisitos)
       * [Banco de Dados](#Banco-de-dados)
       * [Configuração das variáveis de ambiente](#Configuração-das-variáveis-de-ambiente)
-   * [Instalação](#Instalacao)
+   * [Instalação](#Instalação)
       * [Rodando o backend](#Rodando-o-Back-End-(servidor))
-      * [Rodando o frontend](###Rodando-o-Front-End)
-   * [Tecnologias](#tecnologias)
+      * [Rodando o frontend](#Rodando-o-Front-End)
+   * [Tecnologias](#Tecnologias)
 <!--te-->
 
-### Funcionalidades
+# Funcionalidades
     - Encurtamento de URLs
     - Cadastro de usuários
     - Login de usuários
@@ -46,7 +46,7 @@ Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](h
 
 ## Configuração das variáveis de ambiente
 
-Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano). Neles estão contidas as variáveis ambientes necessárias para:
+Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano), pois nesses arquivos você poderá alterar as variáveis com seus dados locais.
 
 #### Arquivo .env do backend
     - Nome do banco de dados (DB_NAME)
