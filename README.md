@@ -10,7 +10,9 @@
 ![Badge](https://img.shields.io/github/stars/NetoVilela/SistemaEncurtadorDeURL)
 ![Badge](https://img.shields.io/github/license/NetoVilela/SistemaEncurtadorDeURL)
 
-Tabela de conteúdos
+> Status do Projeto: Em desenvolvimento :warning:
+
+# Tabela de conteúdos
 =================
 <!--ts-->
    * [Sobre](#Sobre)
@@ -32,13 +34,29 @@ Tabela de conteúdos
     - Login de usuários
     - Listagem de URLs encurtadas por usuário
 
-> Status do Projeto: Em desenvolvimento :warning:
+
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [NodeJS](https://nodejs.org/en/), [ReactJS](https://pt-br.reactjs.org/). 
+[Git](https://git-scm.com), [NodeJS](https://nodejs.org/en/), [ReactJS](https://pt-br.reactjs.org/), [MySQL](https://www.mysql.com/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### Banco de dados
+
+Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) para criar o banco de dados e as tabelas.
+
+### Variáveis de ambiente
+
+Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano). Neles estão contidas as variáveis ambientes necessárias para:
+    - .env do backend
+        - Nome do banco de dados (DB_NAME)
+        - Nome do usuário MySQL (DB_USER)
+        - Senha do banco de dados (DB_PASSWORD)
+        - URL do frontend com a respectiva porta (BASE_URL_FRONT)
+
+    - .env do frontend
+        - URL do backend com a respectiva porta (REACT_APP_API)
 
 ### 🎲 Rodando o Back End (servidor)
 
@@ -55,11 +73,12 @@ $ npm install
 # Execute a aplicação 
 $ node src/index.js
 
-# O servidor inciará na porta:8081 - 
+# O servidor inciará na porta:8081 
 
-# Agora deve ser executado o Front End
+
 ```
 
+### 🎲 Rodando o Front End
 ```bash
 # Acesse a pasta do frontend através do terminal
 $ cd frontend
@@ -70,7 +89,7 @@ $ npm install
 # Execute a aplicação 
 $ npm start
 
-# O frontend inciará na porta:3000 - 
+# O frontend inciará na porta:3000
 
 ```
 
@@ -80,3 +99,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
+- [MySQL](https://www.mysql.com/)
