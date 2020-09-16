@@ -24,6 +24,7 @@
       * [Rodando o backend](#Rodando-o-Back-End)
       * [Rodando o frontend](#Rodando-o-Front-End)
    * [Tecnologias](#Tecnologias)
+   * [Autor](#Autor)
 <!--te-->
 
 # Funcionalidades
@@ -31,7 +32,6 @@
     - Cadastro de usuários
     - Login de usuários
     - Listagem de URLs encurtadas por usuário
-
 
 
 # Pré-requisitos
