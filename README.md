@@ -21,9 +21,9 @@
       * [Banco de Dados](#Banco-de-dados)
       * [Configuração das variáveis de ambiente](#Configuração-das-variáveis-de-ambiente)
    * [Instalação](#Instalação)
-      * [Rodando o backend](#Rodando-o-Back-End-(servidor))
+      * [Rodando o backend](#Rodando-o-Back-End)
       * [Rodando o frontend](#Rodando-o-Front-End)
-   * [Tecnologias](#🛠Tecnologias)
+   * [Tecnologias](#Tecnologias)
 <!--te-->
 
 # Funcionalidades
@@ -59,7 +59,7 @@ Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtador
 
 # Instalação
 
-## Rodando o Back End (servidor)
+## Rodando o Back End
 
 ```bash
 # Clone todo o repositório
