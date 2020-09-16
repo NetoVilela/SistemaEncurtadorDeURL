@@ -15,16 +15,15 @@
 # Tabela de conteúdos
 =================
 <!--ts-->
-   * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
+   * [Funcionalidades](#Funcionalidades)
+   * [Tabela de Conteudo](#Tabela-de-Conteúdo)
+   * [Pré requisitos](#Pré-requisitos)
+      * [Banco de Dados](#Banco-de-dados)
+      * [Configuração das variáveis de ambiente](#Configuração-das-variáveis-de-ambiente)
+   * [Instalação](#Instalacao)
+      * [Rodando o backend](#Rodando-o-Back-End-(servidor))
+      * [Rodando o frontend](#Rodando-o-Front-End)
    * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-   * [Tests](#testes)
    * [Tecnologias](#tecnologias)
 <!--te-->
 
@@ -36,19 +35,20 @@
 
 
 
-### Pré-requisitos
+# Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [NodeJS](https://nodejs.org/en/), [ReactJS](https://pt-br.reactjs.org/), [MySQL](https://www.mysql.com/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-### Banco de dados
+## Banco de dados
 
 Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend), crie o banco de dados e as tabelas.
 
-### Variáveis de ambiente
+## Configuração das variáveis de ambiente
 
 Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano). Neles estão contidas as variáveis ambientes necessárias para:
+
 #### Arquivo .env do backend
     - Nome do banco de dados (DB_NAME)
     - Nome do usuário MySQL (DB_USER)
@@ -58,7 +58,9 @@ Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtador
 #### Arquivo .env do frontend
     - URL do backend com a respectiva porta (REACT_APP_API)
 
-### 🎲 Rodando o Back End (servidor)
+# Instalação
+
+## 🎲 Rodando o Back End (servidor)
 
 ```bash
 # Clone todo o repositório
