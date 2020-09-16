@@ -35,8 +35,6 @@ app.use((req, res, next) => {
     if(res.locals.user==undefined ){
         res.locals.user = req.user;
     }
-    console.log("user em seguida: ")
-    console.log(res.locals.user)
     next();
 });
 

@@ -9,21 +9,14 @@ const { isAuth } = require('../helpers/isAuthenticate');
 const URL = require('../models/URL');
 
 router.get('/:id', (req, res) => {
-
-    // if(res.locals.user){
-    console.log("USUARIO: " + res.locals.user)
     db.sequelize.query(`select * from URLs where id_usuario_url=${req.params.id};`).then(urls => {
         res.status(200).send(urls);
     });
-    // }else{
-
-
-
 });
 
 router.post('/list', isAuth, (req, res) => {
 
-    res.redirect(process.env.BASE_URL_FRONT+'/user/list/' + res.locals.user.id);
+    res.redirect(process.env.BASE_URL_FRONT + '/user/list/' + res.locals.user.id);
 
 });
 
@@ -35,9 +28,9 @@ router.post('/shorten', isAuth, (req, res) => {
             new_url: url,
             id_usuario_url: res.locals.user.id
         }).then(() => {
-            res.redirect(process.env.BASE_URL_FRONT+'/user/list/' + res.locals.user.id);
+            res.redirect(process.env.BASE_URL_FRONT + '/user/list/' + res.locals.user.id);
         }).catch(error => {
-            res.redirect(process.env.BASE_URL_FRONT+'/user/shorten');
+            res.redirect(process.env.BASE_URL_FRONT + '/user/shorten');
         });
     });
 

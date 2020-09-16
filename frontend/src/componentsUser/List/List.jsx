@@ -62,6 +62,18 @@ const Area = styled.div`
     }
 `;
 
+const ListNone = styled.div`
+    border:solid 1px #fff;
+    background: #b5b5b5;
+    padding: 3vh;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 1.1em;
+
+`;
+
 class ListClass extends React.Component {
     constructor(props) {
         super(props);
@@ -88,6 +100,14 @@ class ListClass extends React.Component {
         }
     }
 
+    configureDate = (date) =>{
+        console.log(date)
+        let day = date.substr(8,2)
+        let month = date.substr(5,2); 
+        let year = date.substr(0,4);
+        return `${day}/${month}/${year}`;
+    }
+
     render() {
         const { urls, urlsList } = this.state;
 
@@ -107,11 +127,12 @@ class ListClass extends React.Component {
                                 </thead>
                                 <tbody>
                                     {urls.map(url => {
+                                        {}
                                         return (
                                             <tr key={url.id}>
                                                 <td>{url.original_url}</td>
                                                 <td>{url.new_url}</td>
-                                                <td>{url.createdAt}</td>
+                                                <td>{this.configureDate(url.createdAt)}</td>
                                             </tr>
                                         )
                                     })}
@@ -126,7 +147,7 @@ class ListClass extends React.Component {
                 <ListPage>
                     <SideBar active="list" />
                     <List>
-                        NENHUMA URL CADASTRADA.
+                        <ListNone>Nenhuma URL cadastrada até o momento.</ListNone>
                     </List>
                 </ListPage>
             )
