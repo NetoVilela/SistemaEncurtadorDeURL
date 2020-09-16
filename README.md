@@ -3,7 +3,7 @@
 ## Sistema feito com NodeJS e ReactJS para cadastro/login de usuários e encurtamentos de URLS.
 
 ![Badge](https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT)
-![Badge](https://img.shields.io/static/v1?label=node&message=&color=green&style=for-the-badge&logo=NODE)
+![Badge](https://img.shields.io/static/v1?label=node&message=Ambiente-de-execução&color=green&style=for-the-badge&logo=NODE)
 
 ![Badge](https://img.shields.io/github/issues/NetoVilela/SistemaEncurtadorDeURL)
 ![Badge](https://img.shields.io/github/forks/NetoVilela/SistemaEncurtadorDeURL)
@@ -44,19 +44,19 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ### Banco de dados
 
-Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) para criar o banco de dados e as tabelas.
+Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend), crie o banco de dados e as tabelas.
 
 ### Variáveis de ambiente
 
 Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano). Neles estão contidas as variáveis ambientes necessárias para:
-    - .env do backend
-        - Nome do banco de dados (DB_NAME)
-        - Nome do usuário MySQL (DB_USER)
-        - Senha do banco de dados (DB_PASSWORD)
-        - URL do frontend com a respectiva porta (BASE_URL_FRONT)
+#### Arquivo .env do backend
+    - Nome do banco de dados (DB_NAME)
+    - Nome do usuário MySQL (DB_USER)
+    - Senha do banco de dados (DB_PASSWORD)
+    - URL do frontend com a respectiva porta (BASE_URL_FRONT)
 
-    - .env do frontend
-        - URL do backend com a respectiva porta (REACT_APP_API)
+#### Arquivo .env do frontend
+    - URL do backend com a respectiva porta (REACT_APP_API)
 
 ### 🎲 Rodando o Back End (servidor)
 
@@ -64,7 +64,7 @@ Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtador
 # Clone todo o repositório
 $ git clone <https://github.com/NetoVilela/SistemaEncurtadorDeURL>
 
-# Acesse a pasta do bacakend através do terminal
+# Quando estiver na raíz do projeto acesse a pasta do bacakend através do terminal
 $ cd backend
 
 # Instale as dependências
@@ -80,7 +80,7 @@ $ node src/index.js
 
 ### 🎲 Rodando o Front End
 ```bash
-# Acesse a pasta do frontend através do terminal
+# Quando estiver na raíz do projeto acesse a pasta do frontend através do terminal
 $ cd frontend
 
 # Instale as dependências
@@ -89,8 +89,8 @@ $ npm install
 # Execute a aplicação 
 $ npm start
 
-# O frontend inciará na porta:3000
-
+# O frontend inciará na porta:3000 
+$ Se o frontend não for iniciado na porta 3000, basta alterar a porta na variável ambiente para a porta usada em sua máquina.
 ```
 
 ### 🛠 Tecnologias
