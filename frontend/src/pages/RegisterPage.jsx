@@ -14,7 +14,7 @@ export default props => {
             <Form
                 title="Cadastro"
                 method="POST"
-                action={process.env.REACT_APP_API_REGISTER_USER}
+                action={process.env.REACT_APP_API+'/usuario'}
                 smallQuestion="Já tem uma conta? "
                 smallResponse=" Faça login."
                 redirect="/login"

@@ -55,7 +55,7 @@ export default props => {
     return (
         <React.Fragment>
             <Menu>
-                <Link to="/" className='link-home' exact={true}>
+                <Link to="/" className='link-home'>
                     <Rows>
                         <Row>SEURL</Row>
                         <Row>Sistema Encurtador de URL</Row>

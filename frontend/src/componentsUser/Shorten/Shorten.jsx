@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 /* Components General */
 import SideBar from '../SideBar/SideBar';
+// import request from '../../config/api';
 
 const ShortenPage = styled.div`
     display: flex;
@@ -61,8 +62,9 @@ export default props => {
             <SideBar active="shorten" />
             <Shorten>
                 <AddURL>
-                    <form action={process.env.REACT_APP_API_SHORTEN_URL} method="post">
+                    <form action={process.env.REACT_APP_API+'/url/shorten'} method="post">
                         <input autoComplete="off" type="text" name="url" placeholder="Coloque aqui a sua URL" />
+                        
                         <button type="submit">Encurtar</button>
                     </form>
                 </AddURL>

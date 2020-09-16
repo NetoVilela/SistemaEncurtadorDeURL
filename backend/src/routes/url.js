@@ -3,31 +3,43 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const shortUrl = require('node-url-shortener');
 const db = require("../config/connection");
-
+const { isAuth } = require('../helpers/isAuthenticate');
 
 /* Model URL */
 const URL = require('../models/URL');
 
-router.get('/', (req, res) => {
-    db.sequelize.query("select * from URLs;").then(urls=>{
-        res.send(urls);
+router.get('/:id', (req, res) => {
+
+    // if(res.locals.user){
+    console.log("USUARIO: " + res.locals.user)
+    db.sequelize.query(`select * from URLs where id_usuario_url=${req.params.id};`).then(urls => {
+        res.status(200).send(urls);
     });
+    // }else{
+
+
+
 });
 
-router.post('/shorten', (req, res) => {
+router.post('/list', isAuth, (req, res) => {
+
+    res.redirect(process.env.BASE_URL_FRONT+'/user/list/' + res.locals.user.id);
+
+});
+
+router.post('/shorten', isAuth, (req, res) => {
 
     shortUrl.short(req.body.url, (err, url) => {
         URL.create({
             original_url: req.body.url,
             new_url: url,
-            id_usuario_url:  1
-        }).then(()=>{
-            res.send("URL encurtada com sucesso: " + url);
-        }).catch(error=>{
-            res.send("Erro ao encurtar a URL.");
+            id_usuario_url: res.locals.user.id
+        }).then(() => {
+            res.redirect(process.env.BASE_URL_FRONT+'/user/list/' + res.locals.user.id);
+        }).catch(error => {
+            res.redirect(process.env.BASE_URL_FRONT+'/user/shorten');
         });
     });
-
 
 });
 

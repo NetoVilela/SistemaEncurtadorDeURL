@@ -63,53 +63,74 @@ const Area = styled.div`
 `;
 
 class ListClass extends React.Component {
-
-    state = {
-        urls: [],
+    constructor(props) {
+        super(props);
+        this.state = {
+            urls: [],
+            urlsList: false
+        }
     }
 
     async componentDidMount() {
-        const response = await api.get('/');
-
+        const response = await api.get(`/url/${this.props.match.params.id}`);
         this.setState({
             urls: response.data[0]
         });
-
+        //checks if the user has shortened urls
+        if (response.data[0].length > 0) {
+            this.setState({
+                urlsList: true
+            });
+        } else {
+            this.setState({
+                urlsList: false
+            });
+        }
     }
 
     render() {
-        const { urls } = this.state;
+        const { urls, urlsList } = this.state;
 
-        return (
-            <ListPage>
-                <SideBar active="list" />
-                <List>
-                    <Area>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Url Original</th>
-                                    <th>Nova URL</th>
-                                    <th>Data</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {urls.map(url => {
-                                    return (
-                                        <tr key={url.id}>
-                                            <td>{url.original_url}</td>
-                                            <td>{url.new_url}</td>
-                                            <td>{url.createdAt}</td>
-                                        </tr>
-                                    )
-                                })}
-                            </tbody>
-                        </table>
-                    </Area>
-                </List>
-
-            </ListPage>
-        )
+        if (urlsList) {
+            return (
+                <ListPage>
+                    <SideBar active="list" />
+                    <List>
+                        <Area>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Url Original</th>
+                                        <th>Nova URL</th>
+                                        <th>Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {urls.map(url => {
+                                        return (
+                                            <tr key={url.id}>
+                                                <td>{url.original_url}</td>
+                                                <td>{url.new_url}</td>
+                                                <td>{url.createdAt}</td>
+                                            </tr>
+                                        )
+                                    })}
+                                </tbody>
+                            </table>
+                        </Area>
+                    </List>
+                </ListPage>
+            )
+        }else{
+            return(
+                <ListPage>
+                    <SideBar active="list" />
+                    <List>
+                        NENHUMA URL CADASTRADA.
+                    </List>
+                </ListPage>
+            )
+        }
     }
 }
 

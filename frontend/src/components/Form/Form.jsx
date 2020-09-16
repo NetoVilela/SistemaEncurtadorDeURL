@@ -50,9 +50,10 @@ const Small = styled.small`
 `;
 
 export default props => {
+    const { ...rest } = props;
     return (
         <React.Fragment>
-            <Form action={props.action} method={props.method} >
+            <Form action={props.action} method={props.method} {...rest}>
                 <Title>{props.title}</Title>
                 {props.children}
             </Form>

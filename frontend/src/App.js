@@ -9,20 +9,41 @@ import RegisterPage from './pages/RegisterPage';
 /* UserPageComponents */
 import Shorten from './componentsUser/Shorten/Shorten';
 import List from './componentsUser/List/List';
-
+import LogadoPage from './pages/LogadoPage';
+import DeslogadoPage from './pages/DeslogadoPage';
 
 function App() {
-  return (
-    <BrowserRouter>
+
+  const logado = localStorage.getItem("logado")==="true";
+  if (logado) {
+    return (
+      <BrowserRouter>
         <Switch>
-            <Route path="/" exact={true} component={HomePage} />
-            <Route path="/login" exact={true} component={LoginPage} />
-            <Route path="/cadastro" exact={true} component={RegisterPage} />
-            <Route path="/user/shorten" exact={true} component={Shorten} />
-            <Route path="/user/list" exact={true} component={List} />
+          <Route path="/deslogado" exact component={DeslogadoPage} />
+          <Route path="/logado" exact component={LogadoPage} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/login" exact component={LoginPage} />
+          <Route path="/cadastro" exact component={RegisterPage} />
+          <Route path="/user/shorten" exact component={Shorten} />
+          <Route path="/user/list/:id" exact component={List} />
         </Switch>
-    </ BrowserRouter>
-  )
+      </ BrowserRouter>
+    )
+  } else {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route path="/deslogado" exact component={DeslogadoPage} />
+          <Route path="/logado" exact component={LogadoPage} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/login" exact component={LoginPage} />
+          <Route path="/cadastro" exact component={RegisterPage} />
+        </Switch>
+      </ BrowserRouter>
+    )
+  }
+
+
 }
 
 export default App;

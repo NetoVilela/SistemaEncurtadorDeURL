@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 /* Components General */
 import Ul from './Ul';
 
 const SideBar = styled.div`
-    
-
     .width-true{
         max-width: 200px;
     }
@@ -19,7 +16,7 @@ const SideBar = styled.div`
     background: #333333;
     height: 100vh;
     padding-top: 2vh;
-    ${({stateButton}) => stateButton ? 'width: 200px' : 'width: 0px; overflow: hidden'};
+    ${({ stateButton }) => stateButton ? 'width: 200px' : 'width: 0px; overflow: hidden'};
 
     .link-home{
         text-decoration: none;
@@ -49,7 +46,6 @@ const Button = styled.div`
         font-size: 2em;
         cursor: pointer;
     }
-
 `;
 export default props => {
     const [stateButton, setStateButton] = useState(true)
@@ -58,21 +54,21 @@ export default props => {
     return (
         <SideBarGeneral>
             <SideBar stateButton={stateButton}>
-                <Link to="/" className='link-home' exact={true}>
+                <div className="link-home">
                     <Rows>
                         <Row>SEURL</Row>
                         <Row>Sistema Encurtador de URL</Row>
                     </Rows>
-                </Link>
+                </div>
                 <Ul active={props.active} />
             </SideBar>
 
-            <Button 
-            onClick={()=>{
-                setStateButton(!stateButton);
-                stateButton ? setIcon("fas fa-chevron-right icon-button") : setIcon("fas fa-chevron-left icon-button")
-            }
-            }>
+            <Button
+                onClick={() => {
+                    setStateButton(!stateButton);
+                    stateButton ? setIcon("fas fa-chevron-right icon-button") : setIcon("fas fa-chevron-left icon-button")
+                }
+                }>
                 <i className={icon}></i>
             </Button>
         </SideBarGeneral>

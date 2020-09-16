@@ -11,12 +11,11 @@ module.exports = {
     sequelize: sequelize
 }
 
-
 /* ============Verificando conexão============= */
-sequelize.authenticate().then(()=>{
-    console.log("Connected with success to db");
-    console.log(process.env.DB_NAME);
-}).catch(error=>{
-    console.log("Falha ao se conectar com o banco de dados: "+error);
-    console.log(process.env.DB_NAME);
-})
+// sequelize.authenticate().then(()=>{
+//     console.log("Connected with success to db");
+//     console.log(process.env.DB_NAME);
+// }).catch(error=>{
+//     console.log("Falha ao se conectar com o banco de dados: "+error);
+//     console.log(process.env.DB_NAME);
+// })

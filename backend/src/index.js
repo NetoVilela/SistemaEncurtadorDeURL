@@ -7,7 +7,16 @@ const passport = require("passport");
 const session = require('express-session');
 const { isAuth } = require('./helpers/isAuthenticate');
 
+//Cors
+app.use(cors());
+
 require('./config/auth')(passport);
+
+
+
+//BodyParser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //Session
 app.use(session({
@@ -20,43 +29,31 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 //Middleware
 app.use((req, res, next) => {
-    res.locals.user = req.user || null;
+    if(res.locals.user==undefined ){
+        res.locals.user = req.user;
+    }
+    console.log("user em seguida: ")
+    console.log(res.locals.user)
     next();
 });
 
-//Cors
-app.use(cors());
 
-//BodyParser
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 //Routers
 const userRouter = require('./routes/user');
 const userUrl = require('./routes/url');
 
 app.get('/', (req, res) => {
-    res.send('Inicio')
+    console.log(req.host)
 })
-
 
 //Routes
 app.use('/usuario', userRouter);
 app.use('/url', userUrl);
 
-
-
 app.listen(8081, () => {
     console.log('Servidor iniciado');
 })
-
-
-
-// res.header("Access-Control-Allow-Origin", "*");
-    // res.header("Access-Control-Allow-Headers", 'Origin, X-Requested-Width, Content-Type, Accept, Authorization');
-    // if(req.method==='OPTIONS'){
-    //     res.header("Accesso-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
-    //     return res.status(200).json({})
-    // }

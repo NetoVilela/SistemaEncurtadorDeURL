@@ -4,7 +4,7 @@ module.exports = {
         if(req.isAuthenticated()){
             return next();
         }
-        res.redirect('/temquelogar')
+        res.redirect(process.env.BASE_URL_FRONT+'/login');
     }
 
     

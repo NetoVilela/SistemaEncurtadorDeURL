@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 
 /* Components general */
 import Menu from '../components/Menu/Menu';
@@ -10,6 +11,14 @@ import CardsLink from '../components/CardLink/CardsLink';
 import Footer from '../components/Footer/Footer';
 
 export default props => {
+
+    useEffect(()=>{
+        const request = async () =>{
+            axios.get('http://localhost:8081')
+        }
+        request();
+    })
+
     return (
         <React.Fragment>
             <Menu />
