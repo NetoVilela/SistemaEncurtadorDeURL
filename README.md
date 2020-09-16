@@ -10,7 +10,7 @@
 ![Badge](https://img.shields.io/github/stars/NetoVilela/SistemaEncurtadorDeURL)
 ![Badge](https://img.shields.io/github/license/NetoVilela/SistemaEncurtadorDeURL)
 
-> Status do Projeto: Em desenvolvimento :warning:
+> Status do Projeto: Concluido :heavy_check_mark:
 
 # Tabela de conteúdos
 =================
@@ -21,9 +21,9 @@
       * [Banco de Dados](#Banco-de-dados)
       * [Configuração das variáveis de ambiente](#Configuração-das-variáveis-de-ambiente)
    * [Instalação](#Instalação)
-      * [Rodando o backend](#🎲-Rodando-o-Back-End-(servidor))
-      * [Rodando o frontend](#🎲-Rodando-o-Front-End)
-   * [Tecnologias](#🛠-Tecnologias)
+      * [Rodando o backend](#🎲Rodando-o-Back-End-(servidor))
+      * [Rodando o frontend](#🎲Rodando-o-Front-End)
+   * [Tecnologias](#🛠Tecnologias)
 <!--te-->
 
 # Funcionalidades
@@ -59,7 +59,7 @@ Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtador
 
 # Instalação
 
-## 🎲 Rodando o Back End (servidor)
+## 🎲Rodando o Back End (servidor)
 
 ```bash
 # Clone todo o repositório
@@ -79,7 +79,7 @@ $ node src/index.js
 
 ```
 
-### 🎲 Rodando o Front End
+### 🎲Rodando o Front End
 ```bash
 # Quando estiver na raíz do projeto acesse a pasta do frontend através do terminal
 $ cd frontend
@@ -94,10 +94,15 @@ $ npm start
 $ Se o frontend não for iniciado na porta 3000, basta alterar a porta na variável ambiente para a porta usada em sua máquina.
 ```
 
-### 🛠 Tecnologias
+### 🛠Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [MySQL](https://www.mysql.com/)
+
+
+# Autor
+ [Neto Vilela](https://www.instagram.com/neto.vilela.f/)
+ #### Projeto construído com ânimo, paixão e vontade de aprender. :heart: :blush:
