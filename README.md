@@ -22,8 +22,7 @@
       * [Configuração das variáveis de ambiente](#Configuração-das-variáveis-de-ambiente)
    * [Instalação](#Instalacao)
       * [Rodando o backend](#Rodando-o-Back-End-(servidor))
-      * [Rodando o frontend](#Rodando-o-Front-End)
-   * [Como usar](#como-usar)
+      * [Rodando o frontend](###Rodando-o-Front-End)
    * [Tecnologias](#tecnologias)
 <!--te-->
 
@@ -66,7 +65,7 @@ Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtador
 # Clone todo o repositório
 $ git clone <https://github.com/NetoVilela/SistemaEncurtadorDeURL>
 
-# Quando estiver na raíz do projeto acesse a pasta do bacakend através do terminal
+# Quando estiver na raíz do projeto acesse a pasta do backend através do terminal
 $ cd backend
 
 # Instale as dependências
