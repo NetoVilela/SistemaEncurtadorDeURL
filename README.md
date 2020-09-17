@@ -44,6 +44,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend), crie o banco de dados e as tabelas no seu banco de dados local.
 
+
 ## Configuração das variáveis de ambiente
 
 Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano), pois nesses arquivos você poderá alterar as variáveis de ambiente com seus dados locais.
@@ -78,8 +79,13 @@ $ node src/index.js
 
 # O servidor inciará na porta 8081 
 
-
 ```
+Para saber se a conexão com o banco de dados foi estabelecida com sucesso, vá até o arquivo [connection.js](https://github.com/NetoVilela/SistemaEncurtadorDeURL/blob/master/backend/src/config/connection.js) e descomente as linhas que mostrarão no console as mensagems de sucesso ou falha para a conexão com o banco de dados (linhas 15 a 21 no arquivo). Certifique-se também de que o host seja o endereço da sua máquina, por padrão estará 'localhost':
+```bash
+# Linha 5 do arquivo connection.js
+$ host: 'localhost',
+```
+Se no seu console estiver a mensagem "Conexão com banco de dados estabelecida com sucesso" você estará pronto para o próximo passo.
 
 ### Rodando o Front End
 ```bash
@@ -102,7 +108,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [MySQL](https://www.mysql.com/)
-
+- [Bootstrap](https://getbootstrap.com/)
 
 # Autor
  [Neto Vilela](https://www.instagram.com/neto.vilela.f/)
