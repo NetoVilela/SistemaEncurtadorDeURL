@@ -34,6 +34,7 @@ app.use(passport.session());
 app.use((req, res, next) => {
     if(res.locals.user==undefined ){
         res.locals.user = req.user;
+        console.log("oi")
     }
     next();
 });
@@ -45,7 +46,7 @@ const userRouter = require('./routes/user');
 const userUrl = require('./routes/url');
 
 app.get('/', (req, res) => {
-    console.log(req.host)
+    res.send("oi")
 })
 
 //Routes

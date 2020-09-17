@@ -47,6 +47,7 @@ Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](h
 ## Configuração das variáveis de ambiente
 
 Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano), pois nesses arquivos você poderá alterar as variáveis com seus dados locais.
+Substitua o ip local presente nas variáveis ambientes pelo seu ip na sua rede.
 
 #### Arquivo .env do backend
     - Nome do banco de dados (DB_NAME)
@@ -56,6 +57,7 @@ Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtador
 
 #### Arquivo .env do frontend
     - URL do backend com a respectiva porta (REACT_APP_API)
+    - URL do frontend com a respectiva porta (REACT_APP_FRONT)
 
 # Instalação
 

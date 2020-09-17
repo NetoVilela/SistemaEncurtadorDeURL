@@ -88,6 +88,7 @@ class ListClass extends React.Component {
         this.setState({
             urls: response.data[0]
         });
+        console.log(response.data[0])
         //checks if the user has shortened urls
         if (response.data[0].length > 0) {
             this.setState({
@@ -127,7 +128,6 @@ class ListClass extends React.Component {
                                 </thead>
                                 <tbody>
                                     {urls.map(url => {
-                                        {}
                                         return (
                                             <tr key={url.id}>
                                                 <td>{url.original_url}</td>
