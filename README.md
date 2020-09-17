@@ -10,7 +10,7 @@
 ![Badge](https://img.shields.io/github/stars/NetoVilela/SistemaEncurtadorDeURL)
 ![Badge](https://img.shields.io/github/license/NetoVilela/SistemaEncurtadorDeURL)
 
-> Status do Projeto: Concluido :heavy_check_mark:
+> Status do Projeto: Concluído :heavy_check_mark:
 
 # Tabela de conteúdos
 =================
@@ -42,22 +42,22 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ## Banco de dados
 
-Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend), crie o banco de dados e as tabelas.
+Usando o script do MySQL disponível no arquivo db.sql localizado em [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend), crie o banco de dados e as tabelas no seu banco de dados local.
 
 ## Configuração das variáveis de ambiente
 
-Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano), pois nesses arquivos você poderá alterar as variáveis com seus dados locais.
-Substitua o ip local presente nas variáveis ambientes pelo seu ip na sua rede.
+Foi disponibilizado no [backend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/backend) e no [frontend](https://github.com/NetoVilela/SistemaEncurtadorDeURL/tree/master/frontend) os arquivos '.env' (não foi engano), pois nesses arquivos você poderá alterar as variáveis de ambiente com seus dados locais.
+Substitua o ip local presente nas variáveis de ambiente pelo ip da sua máquina na rede local.
 
-#### Arquivo .env do backend
-    - Nome do banco de dados (DB_NAME)
-    - Nome do usuário MySQL (DB_USER)
-    - Senha do banco de dados (DB_PASSWORD)
-    - URL do frontend com a respectiva porta (BASE_URL_FRONT)
+#### Variáveis de ambiente no arquivo .env do backend
+    - DB_NAME = "Nome do banco de dados"
+    - DB_USER = "Nome do usuário MySQL"
+    - DB_PASSWORD = "Senha do banco de dados"
+    - BASE_URL_FRONT = "URL do frontend com a respectiva porta"
 
-#### Arquivo .env do frontend
-    - URL do backend com a respectiva porta (REACT_APP_API)
-    - URL do frontend com a respectiva porta (REACT_APP_FRONT)
+#### Variáveis de ambiente no arquivo .env do frontend
+    - REACT_APP_API = URL do backend com a respectiva porta
+    - REACT_APP_FRONT = URL do frontend com a respectiva porta
 
 # Instalação
 
@@ -65,7 +65,7 @@ Substitua o ip local presente nas variáveis ambientes pelo seu ip na sua rede.
 
 ```bash
 # Clone todo o repositório
-$ git clone <https://github.com/NetoVilela/SistemaEncurtadorDeURL>
+$ git clone https://github.com/NetoVilela/SistemaEncurtadorDeURL.git
 
 # Quando estiver na raíz do projeto acesse a pasta do backend através do terminal
 $ cd backend
@@ -73,10 +73,10 @@ $ cd backend
 # Instale as dependências
 $ npm install
 
-# Execute a aplicação 
+# Execute o servidor 
 $ node src/index.js
 
-# O servidor inciará na porta:8081 
+# O servidor inciará na porta 8081 
 
 
 ```
@@ -92,8 +92,7 @@ $ npm install
 # Execute a aplicação 
 $ npm start
 
-# O frontend inciará na porta:3000 
-$ Se o frontend não for iniciado na porta 3000, basta alterar a porta na variável ambiente para a porta usada em sua máquina.
+# O frontend inciará na porta 3000 
 ```
 
 ### Tecnologias
