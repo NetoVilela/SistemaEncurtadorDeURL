@@ -105,10 +105,12 @@ $ npm start
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
+- [VSCode](https://code.visualstudio.com/) (IDE utilizada)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [MySQL](https://www.mysql.com/)
 - [Bootstrap](https://getbootstrap.com/)
+- [MySQL](https://www.mysql.com/)
+
 
 # Autor
  [Neto Vilela](https://www.instagram.com/neto.vilela.f/)
