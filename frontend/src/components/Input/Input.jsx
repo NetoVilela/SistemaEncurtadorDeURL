@@ -8,18 +8,21 @@ const Input = styled.input`
     border-bottom: 2px solid rgba(0,0,0,0.8);
     margin-top: 1vh;
     padding: 2vh;
-    color: rgba(0,0,0,0.8);
+
 
     ::-webkit-input-placeholder { /* Edge */
-    color: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,0.4);
+
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: rgba(0,0,0,0.8);
+        color: rgba(0,0,0,0.4);
+
     }
 
     ::placeholder {
-        color: rgba(0,0,0,0.8);
+        color: rgba(0,0,0,0.4);
+
     }
     
 `;

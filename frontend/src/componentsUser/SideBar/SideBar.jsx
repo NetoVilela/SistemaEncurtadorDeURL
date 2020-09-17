@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-
-/* Components General */
+import styled from 'styled-components'
 import Ul from './Ul';
 
 const SideBar = styled.div`
-    .width-true{
-        max-width: 200px;
-    }
-    .width-false{
-        transition: 0.4s;
-        width:0;
-    }
-    
+    max-width: 130px;
     background: #333333;
     height: 100vh;
     padding-top: 2vh;
@@ -34,6 +25,18 @@ const Row = styled.div`
     color: #fff;
     font-size: 0.9em;
     text-align: center;
+    @media only screen and (max-width: 600px) {
+        font-size: 0.7em;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 0.9em;
+    }
+    @media only screen and (min-width: 992px) {
+        font-size: 1em;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: 0.9em;
+    }
 `;
 
 const SideBarGeneral = styled.div`

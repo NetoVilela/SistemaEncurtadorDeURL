@@ -1,10 +1,6 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-/* Components General */
-import ButtonOption from '../ButtonOption/ButtonOption';
-
 
 
 const CardLink = styled.div`
@@ -15,7 +11,7 @@ const CardLink = styled.div`
     border: solid 9px #97CAE5;
     border-radius: 4px;
     margin: 2vh;
-    
+
     .link{
         text-decoration: none;
     }
@@ -38,8 +34,6 @@ export default props => {
     let [opacity, setOpacity] = useState(1);
     let [statusOpacity, setStatusOpacity] = useState(false);
 
-    // opacity = 1, statusOpacity = false;
-
     useEffect(() => {
         const interval = setInterval(() => {
 
@@ -57,13 +51,13 @@ export default props => {
     }, [opacity, statusOpacity]);
 
     return (
-        <Link className="link" to={props.url}>
-            <CardLink opacity={opacity}>
-                <i className={props.icon + ' icon-link'}></i>
-                <ButtonOption islink={false} >
-                    {props.textButton}
-                </ButtonOption>>
-            </CardLink>
-        </Link>
+
+        <CardLink className="link" opacity={opacity}>
+            <i className={props.icon + ' icon-link'}></i>
+            <Link className="link btn btn-success d-flex justify-content-center " to={props.url}>
+                {props.textButton}
+            </Link>
+        </CardLink>
+
     )
 }

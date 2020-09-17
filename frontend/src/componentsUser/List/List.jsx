@@ -19,47 +19,8 @@ const List = styled.div`
 `;
 
 const Area = styled.div`
-    height: 60vh;
-    max-width: 80vw;
-    border: solid 1px black;
+    height: 50vh;
     overflow: auto;
-
-    table{
-        width: 100%;
-        position: relative;
-    }
-    thead tr{
-        border-bottom: 1px solid black;
-    }
-    tr{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 2vh;
-        border-bottom: 1px solid black;
-    }
-    
-    tr:nth-child(2n){
-        background: #c3c3c3;
-    }
-    td{
-        white-space: normal
-    }
-    tbody tr td:nth-child(1){
-        width: 50%;
-        word-wrap:break-word;
-    }
-    tbody tr td:nth-child(2){
-        width: 30%;
-        word-wrap:break-word;
-        
-    }
-    tbody tr td:nth-child(3){
-        width: 20%;
-        word-wrap:break-word;
-        
-    }
 `;
 
 const ListNone = styled.div`
@@ -79,8 +40,10 @@ class ListClass extends React.Component {
         super(props);
         this.state = {
             urls: [],
-            urlsList: false
+            urlsList: false,
+            
         }
+        
     }
 
     async componentDidMount() {
@@ -101,35 +64,38 @@ class ListClass extends React.Component {
         }
     }
 
-    configureDate = (date) =>{
-        console.log(date)
-        let day = date.substr(8,2)
-        let month = date.substr(5,2); 
-        let year = date.substr(0,4);
+    configureDate = (date) => {
+        let day = date.substr(8, 2)
+        let month = date.substr(5, 2);
+        let year = date.substr(0, 4);
         return `${day}/${month}/${year}`;
+        
     }
 
     render() {
         const { urls, urlsList } = this.state;
-
+        let cont = 0;
         if (urlsList) {
             return (
                 <ListPage>
                     <SideBar active="list" />
                     <List>
                         <Area>
-                            <table>
+                            <table className="table table-dark table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>Url Original</th>
-                                        <th>Nova URL</th>
-                                        <th>Data</th>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Url Original</th>
+                                        <th scope="col">Nova URL</th>
+                                        <th scope="col">Data</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {urls.map(url => {
+                                        cont++;
                                         return (
                                             <tr key={url.id}>
+                                                <th scope="row">{cont}</th>
                                                 <td>{url.original_url}</td>
                                                 <td>{url.new_url}</td>
                                                 <td>{this.configureDate(url.createdAt)}</td>
@@ -142,8 +108,8 @@ class ListClass extends React.Component {
                     </List>
                 </ListPage>
             )
-        }else{
-            return(
+        } else {
+            return (
                 <ListPage>
                     <SideBar active="list" />
                     <List>

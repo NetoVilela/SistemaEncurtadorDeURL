@@ -1,9 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-/* Components general */
-import ButtonOption from '../ButtonOption/ButtonOption';
-
 
 const UL = styled.ul`
     list-style: none;
@@ -25,11 +22,11 @@ const UL = styled.ul`
 }
 `;
 
-export default props =>{
-    return(   
+export default props => {
+    return (
         <UL open={props.open}>
-            <li><ButtonOption url="/cadastro" islink={true} >Cadastre-se</ButtonOption></li>
-            <li><ButtonOption url="/login" islink={true} >Login</ButtonOption></li>
+            <li><Link to="/cadastro" className="link btn btn-success ml-2 mt-2">Cadastre-se</Link></li>
+            <li><Link to="/login" className="link btn btn-success ml-2 mt-2">Login</Link></li>
         </UL>
     )
 }

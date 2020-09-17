@@ -34,7 +34,6 @@ app.use(passport.session());
 app.use((req, res, next) => {
     if(res.locals.user==undefined ){
         res.locals.user = req.user;
-        console.log("oi")
     }
     next();
 });

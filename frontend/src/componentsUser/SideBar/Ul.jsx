@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-/* Components General */
 
 const Ul = styled.ul`
     list-style: none;
@@ -18,6 +17,15 @@ const Li = styled.li`
     .link-li{
         color: #fff;
         text-decoration: none;
+        @media only screen and (max-width: 600px) {
+            font-size: 0.7em;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 0.9em;
+        }
+        @media only screen and (min-width: 992px) {
+            font-size: 1em;
+        }
     }
     .link-li:hover{
         transition: 0.3s;
@@ -35,11 +43,13 @@ const Li = styled.li`
         border: none;
         background: transparent;
         cursor: pointer;
+        
     }
     .btn-link:hover{
         transition: 0.3s;
         color: #9e9e9e;
     }
+    
 `;
 
 export default props => {
@@ -49,11 +59,11 @@ export default props => {
             <Ul>
                 <Li><Link className="link-li active" to="/user/shorten">Encurtar URL</Link></Li>
                 <Li>
-                    <form action={process.env.REACT_APP_API+"/url/list"} method="post">
+                    <form action={process.env.REACT_APP_API + "/url/list"} method="post">
                         <button className="link-li btn-link" type="submit">Listar minhas URLs</button>
                     </form>
                 </Li>
-                <Li><a className="link-li" href={process.env.REACT_APP_API+'/usuario/sair'}>Sair</a></Li>
+                <Li><a className="link-li" href={process.env.REACT_APP_API + '/usuario/sair'}>Sair</a></Li>
             </Ul>
         )
     }
@@ -62,11 +72,11 @@ export default props => {
             <Ul>
                 <Li><Link className="link-li" to="/user/shorten">Encurtar URL</Link></Li>
                 <Li>
-                    <form action={process.env.REACT_APP_API+"/url/list"} method="post">
+                    <form action={process.env.REACT_APP_API + "/url/list"} method="post">
                         <button className="link-li active btn-link" type="submit">Listar minhas URLs</button>
                     </form>
                 </Li>
-                <Li><a className="link-li" href={process.env.REACT_APP_API+'/usuario/sair'}>Sair</a></Li>
+                <Li><a className="link-li" href={process.env.REACT_APP_API + '/usuario/sair'}>Sair</a></Li>
             </Ul>
         )
     }
